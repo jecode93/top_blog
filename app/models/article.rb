@@ -1,4 +1,8 @@
 class Article < ApplicationRecord
+	# This add the other side of the association with the articles
+	has_many :comments
+	
+	
 	# Validations are rules that are checked before a model object is saved. 
 	# If any of the checks fail, the save will be aborted, 
 	# and appropriate error messages will be added to the errors attribute 

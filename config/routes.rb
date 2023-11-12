@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root "articles#index"
   
-  resources :articles
+  resources :articles do
+    # This creates comments as a nested resource within articles. 
+    # This is another part of capturing the hierarchical relationship 
+    # that exists between articles and comments.
+    resources :comments
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

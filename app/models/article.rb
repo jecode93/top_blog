@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-	# This add the other side of the association with the articles
+	# This add the other side of the association with the comments
 	has_many :comments
 	
 	
